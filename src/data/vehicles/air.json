@@ -1,0 +1,180 @@
+{
+  "vehicles": [
+    {
+      "id": "su-57",
+      "name": "Су-57",
+      "category": "fighter",
+      "country": "russia",
+      "era": "modern", 
+      "year": 2020,
+      "generation": "5",
+      "specs": {
+        "speed": 2600,
+        "range": 5500,
+        "ceiling": 20,
+        "engines": 2,
+        "crew": 1,
+        "length": "19.8 м",
+        "wingspan": "14 м",
+        "weight": "18500 кг",
+        "armament": "Р-77, Р-73, 30-мм пушка"
+      },
+      "description": "Российский многофункциональный истребитель пятого поколения с технологией стелс.",
+      "image": ""
+    },
+    {
+      "id": "mig-31", 
+      "name": "МиГ-31",
+      "category": "interceptor",
+      "country": "russia",
+      "era": "cold-war",
+      "year": 1981,
+      "generation": "4",
+      "specs": {
+        "speed": 3000,
+        "range": 3300,
+        "ceiling": 20.6,
+        "engines": 2,
+        "crew": 2,
+        "length": "22.7 м",
+        "wingspan": "13.5 м", 
+        "weight": "21820 кг",
+        "armament": "Р-33, Р-37, Р-77, 23-мм пушка"
+      },
+      "description": "Сверхзвуковой истребитель-перехватчик дальнего радиуса действия.",
+      "image": ""
+    },
+    {
+      "id": "su-35s",
+      "name": "Су-35С", 
+      "category": "multirole",
+      "country": "russia",
+      "era": "modern",
+      "year": 2014,
+      "generation": "4+",
+      "specs": {
+        "speed": 2500,
+        "range": 3600,
+        "ceiling": 18,
+        "engines": 2,
+        "crew": 1,
+        "length": "21.9 м",
+        "wingspan": "15.3 м",
+        "weight": "18400 кг",
+        "armament": "Р-77, Р-73, Р-27, 30-мм пушка"
+      },
+      "description": "Многофункциональный сверхманёвренный истребитель поколения 4++.",
+      "image": ""
+    },
+    {
+      "id": "su-34",
+      "name": "Су-34",
+      "category": "attack",
+      "country": "russia",
+      "era": "modern",
+      "year": 2014,
+      "generation": "4+",
+      "specs": {
+        "speed": 1900,
+        "range": 4000,
+        "ceiling": 15,
+        "engines": 2,
+        "crew": 2,
+        "length": "23.3 м",
+        "wingspan": "14.7 м",
+        "weight": "22500 кг",
+        "armament": "30-мм пушка, ракеты 'воздух-поверхность'"
+      },
+      "description": "Фронтовой бомбардировщик с кабиной типа 'плечом к плечу'.",
+      "image": ""
+    },
+    {
+      "id": "tu-95",
+      "name": "Ту-95",
+      "category": "strategic-bomber", 
+      "country": "russia",
+      "era": "cold-war",
+      "year": 1956,
+      "generation": "3",
+      "specs": {
+        "speed": 925,
+        "range": 15000,
+        "ceiling": 12,
+        "engines": 4,
+        "crew": 6,
+        "length": "49.1 м",
+        "wingspan": "54.1 м",
+        "weight": "172000 кг",
+        "armament": "Крылатые ракеты, свободнопадающие бомбы"
+      },
+      "description": "Стратегический бомбардировщик-ракетоносец с турбовинтовыми двигателями.",
+      "image": ""
+    },
+    {
+      "id": "tu-160",
+      "name": "Ту-160",
+      "category": "strategic-bomber",
+      "country": "russia",
+      "era": "cold-war", 
+      "year": 1987,
+      "generation": "4",
+      "specs": {
+        "speed": 2200,
+        "range": 12300,
+        "ceiling": 16,
+        "engines": 4,
+        "crew": 4,
+        "length": "54.1 м",
+        "wingspan": "55.7 м",
+        "weight": "110000 кг", 
+        "armament": "Х-101, Х-555, крылатые ракеты"
+      },
+      "description": "Стратегический сверхзвуковой бомбардировщик-ракетоносец.",
+      "image": ""
+    },
+    {
+      "id": "f-22-raptor",
+      "name": "F-22 Raptor",
+      "category": "fighter",
+      "country": "usa",
+      "era": "modern",
+      "year": 2005,
+      "generation": "5",
+      "specs": {
+        "speed": 2410,
+        "range": 3200,
+        "ceiling": 19.8,
+        "engines": 2,
+        "crew": 1,
+        "length": "18.9 м",
+        "wingspan": "13.6 м",
+        "weight": "19700 кг",
+        "armament": "AIM-120, AIM-9, 20-мм пушка"
+      },
+      "description": "Американский истребитель пятого поколения с технологией стелс.",
+      "image": ""
+    },
+    {
+      "id": "f-35-lightning",
+      "name": "F-35 Lightning II", 
+      "category": "multirole",
+      "country": "usa",
+      "era": "modern",
+      "year": 2015,
+      "generation": "5",
+      "specs": {
+        "speed": 1930,
+        "range": 2200,
+        "ceiling": 15.2,
+        "engines": 1,
+        "crew": 1,
+        "length": "15.7 м",
+        "wingspan": "10.7 м",
+        "weight": "13300 кг",
+        "armament": "AIM-120, AIM-9, 25-мм пушка"
+      },
+      "description": "Многоцелевой истребитель пятого поколения в трёх вариантах.",
+      "image": ""
+    }
+  ]
+}

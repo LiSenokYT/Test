@@ -1,0 +1,148 @@
+{
+  "vehicles": [
+    {
+      "id": "kuznetsov",
+      "name": "Адмирал Кузнецов",
+      "category": "aircraft-carrier",
+      "country": "russia",
+      "era": "modern",
+      "year": 1991,
+      "specs": {
+        "displacement": 61390,
+        "length": 306,
+        "speed": 29,
+        "crew": 1960,
+        "armament": "П-700 Гранит, ЗРАК Каштан, ЗРК Кинжал",
+        "aircraft": "Су-33, МиГ-29К, Ка-27"
+      },
+      "description": "Тяжёлый авианесущий крейсер проекта 1143.5 - единственный авианосец ВМФ России.",
+      "image": ""
+    },
+    {
+      "id": "peter-the-great",
+      "name": "Пётр Великий",
+      "category": "cruiser",
+      "country": "russia",
+      "era": "modern",
+      "year": 1998,
+      "specs": {
+        "displacement": 25860,
+        "length": 252,
+        "speed": 32,
+        "crew": 727,
+        "armament": "П-700 Гранит, ЗРК Форт, ЗРК Оса-М",
+        "aircraft": "3 вертолёта Ка-27"
+      },
+      "description": "Тяжёлый атомный ракетный крейсер проекта 1144 - флагман Северного флота ВМФ России.",
+      "image": ""
+    },
+    {
+      "id": "yamato",
+      "name": "Ямато",
+      "category": "battleship",
+      "country": "japan",
+      "era": "ww2",
+      "year": 1941,
+      "specs": {
+        "displacement": 72800,
+        "length": 263,
+        "speed": 27,
+        "crew": 2500,
+        "armament": "9 × 460-мм орудий, 12 × 155-мм орудий",
+        "aircraft": "7 гидросамолётов"
+      },
+      "description": "Крупнейший линейный корабль в истории человечества, символ морской мощи Японии.",
+      "image": ""
+    },
+    {
+      "id": "nimitz",
+      "name": "USS Nimitz",
+      "category": "aircraft-carrier",
+      "country": "usa",
+      "era": "cold-war",
+      "year": 1975,
+      "specs": {
+        "displacement": 101000,
+        "length": 333,
+        "speed": 30,
+        "crew": 5680,
+        "armament": "ЗРК Sea Sparrow, Phalanx CIWS",
+        "aircraft": "90 самолётов и вертолётов"
+      },
+      "description": "Головной атомный авианосец типа «Нимиц» - один из крупнейших военных кораблей в мире.",
+      "image": ""
+    },
+    {
+      "id": "type-055",
+      "name": "Type 055",
+      "category": "destroyer",
+      "country": "china",
+      "era": "modern",
+      "year": 2020,
+      "specs": {
+        "displacement": 13000,
+        "length": 180,
+        "speed": 32,
+        "crew": 310,
+        "armament": "112 УВП, ЗРК HQ-9, ПКР YJ-18",
+        "aircraft": "2 вертолёта"
+      },
+      "description": "Новейший эсминец УРО ВМС Китая, один из самых современных в своём классе.",
+      "image": ""
+    },
+    {
+      "id": "akula",
+      "name": "Акула (проект 971)",
+      "category": "submarine",
+      "country": "russia",
+      "era": "cold-war",
+      "year": 1984,
+      "specs": {
+        "displacement": 12770,
+        "length": 110,
+        "speed": 33,
+        "crew": 73,
+        "armament": "4 × 533-мм ТА, 4 × 650-мм ТА",
+        "endurance": "100 дней"
+      },
+      "description": "Многоцелевая атомная подводная лодка - одна из самых тихих и эффективных в мире.",
+      "image": ""
+    },
+    {
+      "id": "iowa",
+      "name": "USS Iowa",
+      "category": "battleship",
+      "country": "usa",
+      "era": "ww2",
+      "year": 1943,
+      "specs": {
+        "displacement": 57000,
+        "length": 270,
+        "speed": 33,
+        "crew": 2700,
+        "armament": "9 × 406-мм орудий, 20 × 127-мм орудий",
+        "armor": "307-мм пояс"
+      },
+      "description": "Линейный корабль типа «Айова» - один из самых мощных линкоров в истории.",
+      "image": ""
+    },
+    {
+      "id": "admiral-gorshkov",
+      "name": "Адмирал Горшков",
+      "category": "frigate",
+      "country": "russia",
+      "era": "modern",
+      "year": 2018,
+      "specs": {
+        "displacement": 5400,
+        "length": 135,
+        "speed": 29,
+        "crew": 210,
+        "armament": "ПКР Калибр, ЗРК Полимент-Редут",
+        "aircraft": "1 вертолёт Ка-27"
+      },
+      "description": "Сторожевой корабль проекта 22350 - первый серийный фрегат дальней морской зоны ВМФ России.",
+      "image": ""
+    }
+  ]
+}

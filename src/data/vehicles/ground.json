@@ -1,0 +1,156 @@
+{
+  "vehicles": [
+    {
+      "id": "t-72b3",
+      "name": "Т-72Б3",
+      "category": "mbt",
+      "country": "russia",
+      "era": "modern",
+      "year": 2016,
+      "specs": {
+        "weight": 46,
+        "crew": 3,
+        "caliber": 125,
+        "speed": 60,
+        "engine": "В-84-1, 840 л.с.",
+        "armor": "Комбинированная",
+        "main_gun": "125mm 2A46M"
+      },
+      "description": "Современная модернизация основного боевого танка Т-72 с улучшенной защитой и системами управления огнём.",
+      "image": ""
+    },
+    {
+      "id": "m1a2-abrams",
+      "name": "M1A2 Abrams",
+      "category": "mbt", 
+      "country": "usa",
+      "era": "modern",
+      "year": 1992,
+      "specs": {
+        "weight": 63,
+        "crew": 4,
+        "caliber": 120,
+        "speed": 67,
+        "engine": "AGT-1500, 1500 л.с.",
+        "armor": "Композитная", 
+        "main_gun": "120mm M256"
+      },
+      "description": "Американский основной боевой танк третьего поколения с цифровой системой управления.",
+      "image": ""
+    },
+    {
+      "id": "leopard-2a7",
+      "name": "Leopard 2A7",
+      "category": "mbt",
+      "country": "germany", 
+      "era": "modern",
+      "year": 2014,
+      "specs": {
+        "weight": 67,
+        "crew": 4,
+        "caliber": 120,
+        "speed": 72,
+        "engine": "MTU MB 873, 1500 л.с.",
+        "armor": "Композитная",
+        "main_gun": "120mm Rh-120"
+      },
+      "description": "Немецкий основной боевой танк, считающийся одним из лучших в мире.",
+      "image": ""
+    },
+    {
+      "id": "bmp-3",
+      "name": "БМП-3", 
+      "category": "ifv",
+      "country": "russia",
+      "era": "cold-war",
+      "year": 1987,
+      "specs": {
+        "weight": 18,
+        "crew": 3,
+        "caliber": 100,
+        "speed": 70,
+        "engine": "УТД-29, 500 л.с.",
+        "armor": "Алюминиевая",
+        "main_gun": "100mm 2A70"
+      },
+      "description": "Боевая машина пехоты с уникальным комплексом вооружения.",
+      "image": ""
+    },
+    {
+      "id": "t-34-85",
+      "name": "Т-34-85",
+      "category": "medium-tank",
+      "country": "russia",
+      "era": "ww2", 
+      "year": 1944,
+      "specs": {
+        "weight": 32,
+        "crew": 5,
+        "caliber": 85,
+        "speed": 55,
+        "engine": "В-2-34, 500 л.с.",
+        "armor": "Катаная сталь",
+        "main_gun": "85mm ЗИС-С-53"
+      },
+      "description": "Легендарный советский средний танк времён Второй мировой войны.",
+      "image": ""
+    },
+    {
+      "id": "tiger-i",
+      "name": "Tiger I",
+      "category": "heavy-tank",
+      "country": "germany",
+      "era": "ww2",
+      "year": 1942, 
+      "specs": {
+        "weight": 57,
+        "crew": 5,
+        "caliber": 88,
+        "speed": 45,
+        "engine": "Maybach HL230, 700 л.с.",
+        "armor": "Катаная сталь",
+        "main_gun": "88mm KwK 36"
+      },
+      "description": "Немецкий тяжёлый танк, один из самых известных танков Второй мировой.",
+      "image": ""
+    },
+    {
+      "id": "btr-82a",
+      "name": "БТР-82А",
+      "category": "apc",
+      "country": "russia", 
+      "era": "modern",
+      "year": 2013,
+      "specs": {
+        "weight": 15,
+        "crew": 3,
+        "caliber": 30,
+        "speed": 80,
+        "engine": "Камаз-740.14-300, 300 л.с.",
+        "armor": "Стальная",
+        "main_gun": "30mm 2A72"
+      },
+      "description": "Современный бронетранспортёр с улучшенными характеристиками.",
+      "image": ""
+    },
+    {
+      "id": "m2-bradley",
+      "name": "M2 Bradley", 
+      "category": "ifv",
+      "country": "usa",
+      "era": "cold-war",
+      "year": 1981,
+      "specs": {
+        "weight": 27,
+        "crew": 3,
+        "caliber": 25,
+        "speed": 66,
+        "engine": "Cummins VTA-903T, 600 л.с.",
+        "armor": "Алюминиевая",
+        "main_gun": "25mm M242"
+      },
+      "description": "Американская боевая машина пехоты с мощным вооружением.",
+      "image": ""
+    }
+  ]
+}
