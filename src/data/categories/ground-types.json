@@ -1,0 +1,74 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": "Все",
+      "filter": "all"
+    },
+    {
+      "id": "mbt", 
+      "name": "ОБТ",
+      "filter": "mbt"
+    },
+    {
+      "id": "light-tank",
+      "name": "Лёгкие танки", 
+      "filter": "light-tank"
+    },
+    {
+      "id": "medium-tank",
+      "name": "Средние танки",
+      "filter": "medium-tank"
+    },
+    {
+      "id": "heavy-tank",
+      "name": "Тяжёлые танки",
+      "filter": "heavy-tank" 
+    },
+    {
+      "id": "ifv",
+      "name": "БМП",
+      "filter": "ifv"
+    },
+    {
+      "id": "apc",
+      "name": "БТР",
+      "filter": "apc"
+    },
+    {
+      "id": "spg",
+      "name": "САУ",
+      "filter": "spg"
+    },
+    {
+      "id": "brdm", 
+      "name": "БРДМ",
+      "filter": "brdm"
+    },
+    {
+      "id": "bmd",
+      "name": "БМД",
+      "filter": "bmd"
+    },
+    {
+      "id": "cbrn",
+      "name": "РХБЗ", 
+      "filter": "cbrn"
+    },
+    {
+      "id": "engineer",
+      "name": "ИРМ",
+      "filter": "engineer"
+    },
+    {
+      "id": "spaag",
+      "name": "ЗСУ",
+      "filter": "spaag"
+    },
+    {
+      "id": "recovery",
+      "name": "МТО",
+      "filter": "recovery"
+    }
+  ]
+}

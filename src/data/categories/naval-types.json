@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": "Все",
+      "filter": "all"
+    },
+    {
+      "id": "aircraft-carrier",
+      "name": "Авианосец",
+      "filter": "aircraft-carrier"
+    },
+    {
+      "id": "battleship",
+      "name": "Линкор",
+      "filter": "battleship"
+    },
+    {
+      "id": "cruiser",
+      "name": "Крейсер",
+      "filter": "cruiser"
+    },
+    {
+      "id": "destroyer",
+      "name": "Эсминец",
+      "filter": "destroyer"
+    },
+    {
+      "id": "frigate",
+      "name": "Фрегат",
+      "filter": "frigate"
+    },
+    {
+      "id": "corvette",
+      "name": "Корвет",
+      "filter": "corvette"
+    },
+    {
+      "id": "submarine",
+      "name": "Подлодка",
+      "filter": "submarine"
+    },
+    {
+      "id": "landing-ship",
+      "name": "Десантный корабль",
+      "filter": "landing-ship"
+    },
+    {
+      "id": "patrol-ship",
+      "name": "Сторожевой корабль",
+      "filter": "patrol-ship"
+    }
+  ]
+}

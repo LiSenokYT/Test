@@ -1,0 +1,84 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": "Все",
+      "filter": "all"
+    },
+    {
+      "id": "fighter",
+      "name": "Истребитель", 
+      "filter": "fighter"
+    },
+    {
+      "id": "interceptor",
+      "name": "Истребитель-перехватчик",
+      "filter": "interceptor"
+    },
+    {
+      "id": "multirole", 
+      "name": "Многоцелевой истребитель",
+      "filter": "multirole"
+    },
+    {
+      "id": "bomber",
+      "name": "Бомбардировщик",
+      "filter": "bomber"
+    },
+    {
+      "id": "strategic-bomber",
+      "name": "Стратегический бомбардировщик", 
+      "filter": "strategic-bomber"
+    },
+    {
+      "id": "attack",
+      "name": "Штурмовик",
+      "filter": "attack"
+    },
+    {
+      "id": "cas",
+      "name": "Самолёт поддержки",
+      "filter": "cas"
+    },
+    {
+      "id": "recon",
+      "name": "Самолёт-разведчик",
+      "filter": "recon"
+    },
+    {
+      "id": "awacs", 
+      "name": "Самолёт ДРЛО",
+      "filter": "awacs"
+    },
+    {
+      "id": "tanker",
+      "name": "Топливозаправщик",
+      "filter": "tanker"
+    },
+    {
+      "id": "transport",
+      "name": "Транспортный", 
+      "filter": "transport"
+    },
+    {
+      "id": "trainer",
+      "name": "Учебный",
+      "filter": "trainer"
+    },
+    {
+      "id": "attack-helicopter",
+      "name": "Ударный вертолёт",
+      "filter": "attack-helicopter"
+    },
+    {
+      "id": "transport-helicopter",
+      "name": "Транспортный вертолёт", 
+      "filter": "transport-helicopter"
+    },
+    {
+      "id": "special",
+      "name": "Специальный",
+      "filter": "special"
+    }
+  ]
+}
