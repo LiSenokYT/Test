@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Морская техника | Архив Брони</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/catalog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">АРХИВ БРОНИ</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Главная</a></li>
+                    <li><a href="ground-vehicles.html" class="nav-link">Наземная</a></li>
+                    <li><a href="air-vehicles.html" class="nav-link">Воздушная</a></li>
+                    <li><a href="naval-vehicles.html" class="nav-link active">Морская</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск техники..." class="search-input">
+                        <button type="button" class="search-btn">🔍</button>
+                    </div>
+                    <button type="button" class="mobile-menu-btn">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="current">Морская техника</span>
+            </div>
+            
+            <div class="page-header-content">
+                <h1 class="page-title">Морская техника</h1>
+                <p class="page-subtitle">Авианосцы, крейсеры, подводные лодки и другие корабли военно-морского флота</p>
+                
+                <div class="quick-stats">
+                    <div class="quick-stat">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">единиц техники</span>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">стран</span>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">категорий</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-header">
+                <h2>
+                    <span>⛴️</span>
+                    Фильтры морской техники
+                </h2>
+                <div class="filters-actions">
+                    <button type="button" class="filters-toggle" id="filtersToggle">
+                        <span>Показать фильтры</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+                    <button type="button" class="clear-filters" id="clearFilters">Сбросить все</button>
+                </div>
+            </div>
+            
+            <div class="filters-container" id="filtersContainer">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label class="filter-label">Поиск по названию</label>
+                        <div class="search-filter">
+                            <input type="text" id="searchFilter" placeholder="Например: Кузнецов, Yamato...">
+                            <button type="button" class="search-filter-btn">🔍</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Тип корабля</label>
+                        <div class="filter-chips" id="typeFilter">
+                            <button type="button" class="filter-chip active" data-type="all">Все</button>
+                            <button type="button" class="filter-chip" data-type="aircraft-carrier">Авианосец</button>
+                            <button type="button" class="filter-chip" data-type="cruiser">Крейсер</button>
+                            <button type="button" class="filter-chip" data-type="destroyer">Эсминец</button>
+                            <button type="button" class="filter-chip" data-type="frigate">Фрегат</button>
+                            <button type="button" class="filter-chip" data-type="corvette">Корвет</button>
+                            <button type="button" class="filter-chip" data-type="submarine">Подлодка</button>
+                            <button type="button" class="filter-chip" data-type="landing-ship">Десантный корабль</button>
+                            <button type="button" class="filter-chip" data-type="patrol-ship">Сторожевой корабль</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Страна</label>
+                        <select class="filter-select" id="countryFilter">
+                            <option value="all">Все страны</option>
+                            <option value="russia">Россия/СССР</option>
+                            <option value="usa">США</option>
+                            <option value="uk">Великобритания</option>
+                            <option value="france">Франция</option>
+                            <option value="china">Китай</option>
+                            <option value="japan">Япония</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Период</label>
+                        <select class="filter-select" id="eraFilter">
+                            <option value="all">Все периоды</option>
+                            <option value="ww2">Вторая мировая</option>
+                            <option value="cold-war">Холодная война</option>
+                            <option value="modern">Современность</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Годы службы</label>
+                        <div class="range-filter">
+                            <div class="range-inputs">
+                                <input type="number" id="yearFrom" placeholder="1940" min="1900" max="2030">
+                                <span class="range-separator">—</span>
+                                <input type="number" id="yearTo" placeholder="2024" min="1900" max="2030">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <button type="button" class="advanced-filters-toggle" id="advancedToggle">
+                            <span>Расширенные фильтры</span>
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                    </div>
+
+                    <div class="advanced-filters" id="advancedFilters">
+                        <div class="filter-group">
+                            <label class="filter-label">Водоизмещение</label>
+                            <select class="filter-select" id="displacementFilter">
+                                <option value="all">Любое</option>
+                                <option value="small">Малые (до 5,000 т)</option>
+                                <option value="medium">Средние (5,000-15,000 т)</option>
+                                <option value="large">Крупные (15,000-50,000 т)</option>
+                                <option value="super-large">Очень крупные (50,000+ т)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-label">Экипаж</label>
+                            <select class="filter-select" id="crewFilter">
+                                <option value="all">Любой</option>
+                                <option value="small">Малый (до 100 чел)</option>
+                                <option value="medium">Средний (100-500 чел)</option>
+                                <option value="large">Крупный (500+ чел)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-label">Скорость</label>
+                            <select class="filter-select" id="speedFilter">
+                                <option value="all">Любая</option>
+                                <option value="slow">Малая (до 25 узлов)</option>
+                                <option value="medium">Средняя (25-35 узлов)</option>
+                                <option value="fast">Высокая (35+ узлов)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="active-filters" id="activeFilters">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="container">
+            <div class="results-header">
+                <div class="results-info">
+                    <h3>Найдено единиц: <span id="resultsCount">15</span></h3>
+                    <div class="sort-controls">
+                        <label>Сортировка:</label>
+                        <select id="sortSelect">
+                            <option value="name">По названию (А-Я)</option>
+                            <option value="name-desc">По названию (Я-А)</option>
+                            <option value="year">По году (старые)</option>
+                            <option value="year-desc">По году (новые)</option>
+                            <option value="displacement">По водоизм. (малые)</option>
+                            <option value="displacement-desc">По водоизм. (крупные)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="view-controls">
+                    <button type="button" class="view-btn active" data-view="grid" title="Сетка">
+                        ▦
+                    </button>
+                    <button type="button" class="view-btn" data-view="list" title="Список">
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <div class="vehicles-grid" id="vehiclesGrid">
+                <!-- Морская техника будет здесь -->
+            </div>
+
+            <div class="loading-state" id="loadingState">
+                <div class="loading-spinner"></div>
+                <p>Загрузка морской техники...</p>
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-icon">⛴️</div>
+                <h3>Корабли не найдены</h3>
+                <p>Попробуйте изменить параметры фильтрации</p>
+                <button type="button" class="cta-button primary" id="resetSearch">Сбросить фильтры</button>
+            </div>
+
+            <div class="load-more-container">
+                <button type="button" class="load-more-btn" id="loadMore">Загрузить ещё</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="modalClose">✕</button>
+            <div class="modal-body" id="modalBody">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">АРХИВ БРОНИ</span>
+                    </div>
+                    <p class="footer-description">
+                        Энциклопедия военной техники от древности до наших дней. 
+                        История, характеристики и технические details.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="ground-vehicles.html">Наземная</a></li>
+                        <li><a href="air-vehicles.html">Воздушная</a></li>
+                        <li><a href="naval-vehicles.html">Морская</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Категории</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Авианосцы</a></li>
+                        <li><a href="#">Крейсеры</a></li>
+                        <li><a href="#">Подлодки</a></li>
+                        <li><a href="#">Эсминцы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Архив Брони. Фанатский проект. Не преследует политических целей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем загрузчик данных -->
+    <script src="../src/data/data-loader.js"></script>
+    <!-- Общие утилиты -->
+    <script src="../src/js/utils.js"></script>
+    
+    <script>
+    // NavalCatalog класс для морской техники
+    class NavalCatalog {
+        constructor() {
+            this.vehicles = [];
+            this.filteredVehicles = [];
+            this.currentPage = 1;
+            this.itemsPerPage = 12;
+            this.filters = {
+                search: '',
+                type: 'all',
+                country: 'all',
+                era: 'all',
+                yearFrom: '',
+                yearTo: '',
+                displacement: 'all',
+                crew: 'all',
+                speed: 'all'
+            };
+            this.sortBy = 'name';
+            this.viewMode = 'grid';
+            this.filtersVisible = false;
+
+            this.init();
+        }
+
+        async init() {
+            await this.loadVehicles();
+            this.bindEvents();
+            this.applyFilters();
+            this.toggleFilters && this.toggleFilters(false);
+        }
+
+        async loadVehicles() {
+            try {
+                const loader = window.dataLoader;
+                this.vehicles = await (loader ? loader.loadVehicles('naval') : []);
+                if (!Array.isArray(this.vehicles)) { this.vehicles = []; }
+                this.filteredVehicles = this.vehicles.slice();
+                this.displayVehicles();
+            } catch (e) {
+                console.error('Error loading naval vehicles', e);
+                this.vehicles = [];
+                this.filteredVehicles = [];
+            }
+        }
+
+        applyFilters() {
+            this.currentPage = 1;
+            this.filteredVehicles = this.vehicles.filter(v => this.matchesFilters(v));
+            this.sortVehicles();
+            this.updateActiveFilters && this.updateActiveFilters();
+            this.displayVehicles();
+        }
+
+        sortVehicles() {
+            this.filteredVehicles.sort((a, b) => {
+                switch (this.sortBy) {
+                    case 'name': return a.name.localeCompare(b.name);
+                    case 'name-desc': return b.name.localeCompare(a.name);
+                    case 'year': return (a.year || 0) - (b.year || 0);
+                    case 'year-desc': return (b.year || 0) - (a.year || 0);
+                    case 'displacement': return (a.specs && a.specs.displacement || 0) - (b.specs && b.specs.displacement || 0);
+                    case 'displacement-desc': return (b.specs && b.specs.displacement || 0) - (a.specs && a.specs.displacement || 0);
+                    default: return 0;
+                }
+            });
+        }
+
+        bindEvents() {
+            // Toggle filters
+            document.getElementById('filtersToggle').addEventListener('click', () => {
+                this.toggleFilters();
+            });
+
+            // Search filter
+            document.getElementById('searchFilter').addEventListener('input', (e) => {
+                this.filters.search = e.target.value;
+                this.applyFilters();
+            });
+
+            // Type filter chips
+            document.querySelectorAll('.filter-chip').forEach(chip => {
+                chip.addEventListener('click', (e) => {
+                    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                    e.target.classList.add('active');
+                    this.filters.type = e.target.dataset.type;
+                    this.applyFilters();
+                });
+            });
+
+            // Select filters
+            ['country', 'era'].forEach(filter => {
+                const element = document.getElementById(filter + 'Filter');
+                if (element) {
+                    element.addEventListener('change', (e) => {
+                        this.filters[filter] = e.target.value;
+                        this.applyFilters();
+                    });
+                }
+            });
+
+            // Sort control
+            const sortSelect = document.getElementById('sortSelect');
+            if (sortSelect) {
+                sortSelect.addEventListener('change', (e) => {
+                    this.sortBy = e.target.value;
+                    this.applyFilters();
+                });
+            }
+
+            // Clear filters
+            document.getElementById('clearFilters').addEventListener('click', () => {
+                this.clearFilters();
+            });
+
+            // Advanced filters toggle
+            const advancedToggle = document.getElementById('advancedToggle');
+            if (advancedToggle) {
+                advancedToggle.addEventListener('click', (e) => {
+                    e.target.classList.toggle('active');
+                    document.getElementById('advancedFilters').classList.toggle('active');
+                });
+            }
+
+            // Advanced filters
+            ['displacement', 'crew', 'speed'].forEach(filter => {
+                const element = document.getElementById(filter + 'Filter');
+                if (element) {
+                    element.addEventListener('change', (e) => {
+                        this.filters[filter] = e.target.value;
+                        this.applyFilters();
+                    });
+                }
+            });
+
+            // Year range filters
+            ['yearFrom', 'yearTo'].forEach(filter => {
+                const element = document.getElementById(filter);
+                if (element) {
+                    element.addEventListener('input', (e) => {
+                        this.filters[filter] = e.target.value;
+                        this.applyFilters();
+                    });
+                }
+            });
+
+            // View controls
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    this.viewMode = e.target.dataset.view;
+                    this.updateViewMode();
+                });
+            });
+
+            // Modal close
+            const modalClose = document.getElementById('modalClose');
+            if (modalClose) {
+                modalClose.addEventListener('click', () => {
+                    this.closeModal();
+                });
+            }
+
+            // Close modal on backdrop click
+            const modal = document.getElementById('quickViewModal');
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target.id === 'quickViewModal') {
+                        this.closeModal();
+                    }
+                });
+            }
+        }
+
+        clearFilters() {
+            this.filters = {
+                search: '',
+                type: 'all',
+                country: 'all',
+                era: 'all',
+                yearFrom: '',
+                yearTo: '',
+                displacement: 'all',
+                crew: 'all',
+                speed: 'all'
+            };
+            
+            this.sortBy = 'name'; // ← ДОБАВЛЯЕМ СБРОС СОРТИРОВКИ
+
+            document.getElementById('searchFilter').value = '';
+            document.querySelectorAll('.filter-chip').forEach(chip => {
+                chip.classList.remove('active');
+                if (chip.dataset.type === 'all') chip.classList.add('active');
+            });
+            
+            ['country', 'era'].forEach(filter => {
+                const element = document.getElementById(filter + 'Filter');
+                if (element) { element.value = 'all'; }
+            });
+            
+            // Сбрасываем селект сортировки
+            const sortSelect = document.getElementById('sortSelect');
+            if (sortSelect) { sortSelect.value = 'name'; }
+
+            this.applyFilters();
+        }
+
+        // Quick View функциональность
+        bindVehicleCardEvents() {
+            document.querySelectorAll('.quick-view-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const vehicleId = e.target.dataset.vehicleId;
+                    this.showQuickView(vehicleId);
+                });
+            });
+
+            document.querySelectorAll('.vehicle-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('vehicle-btn')) {
+                        const vehicleId = card.dataset.vehicleId;
+                        // ПЕРЕХОДИМ НА ДЕТАЛЬНУЮ СТРАНИЦУ
+                        window.location.href = `naval-details.html?id=${vehicleId}`;
+                    }
+                });
+            });
+        }
+
+        showQuickView(vehicleId) {
+            const vehicle = this.vehicles.find(v => v.id === vehicleId);
+            if (!vehicle) return;
+
+            const modalBody = document.getElementById('modalBody');
+            if (!modalBody) return;
+
+            modalBody.innerHTML = this.createQuickViewContent(vehicle);
+
+            // Навешиваем безопасный обработчик для кнопки закрытия
+            const closeBtn = modalBody.querySelector('.close-modal-btn');
+            if (closeBtn) closeBtn.addEventListener('click', () => this.closeModal());
+
+            document.getElementById('quickViewModal').classList.add('active');
+        }
+
+        createQuickViewContent(vehicle) {
+            const typeLabel = this.getTypeLabel(vehicle.category);
+            const countryLabel = this.getCountryLabel(vehicle.country);
+
+            return `
+                <div class="quick-view">
+                    <div class="quick-view-image">
+                        <div class="vehicle-image-placeholder large">
+                            ${escapeHtml(vehicle.name)}
+                        </div>
+                    </div>
+                    <div class="quick-view-content">
+                        <h2>${escapeHtml(vehicle.name)}</h2>
+                        <div class="quick-view-meta">
+                            <span class="meta-item">${countryLabel}</span>
+                            <span class="meta-item">${vehicle.year} год</span>
+                            <span class="meta-item">${typeLabel}</span>
+                        </div>
+                        
+                        <div class="quick-view-specs">
+                            <div class="spec-row">
+                                <span class="spec-name">Водоизмещение:</span>
+                                <span class="spec-value">${vehicle.specs.displacement} тонн</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-name">Длина:</span>
+                                <span class="spec-value">${vehicle.specs.length} метров</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-name">Экипаж:</span>
+                                <span class="spec-value">${vehicle.specs.crew} человек</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-name">Макс. скорость:</span>
+                                <span class="spec-value">${vehicle.specs.speed} узлов</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-name">Вооружение:</span>
+                                <span class="spec-value">${escapeHtml(vehicle.specs.armament)}</span>
+                            </div>
+                            ${vehicle.specs.aircraft ? `
+                            <div class="spec-row">
+                                <span class="spec-name">Авиагруппа:</span>
+                                <span class="spec-value">${escapeHtml(vehicle.specs.aircraft)}</span>
+                            </div>
+                            ` : ''}
+                        </div>
+                        
+                        <p class="quick-view-description">${escapeHtml(vehicle.description)}</p>
+                        
+                        <div class="quick-view-actions">
+                            <a href="naval-details.html?id=${encodeURIComponent(vehicle.id)}" class="vehicle-btn">
+                                Полное описание
+                            </a>
+                            <button type="button" class="vehicle-btn secondary close-modal-btn">
+                                Закрыть
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        closeModal() {
+            document.getElementById('quickViewModal').classList.remove('active');
+        }
+
+        matchesFilters(vehicle) {
+            // Search filter
+            if (this.filters.search && !vehicle.name.toLowerCase().includes(this.filters.search.toLowerCase())) {
+                return false;
+            }
+
+            // Type filter
+            if (this.filters.type !== 'all' && vehicle.category !== this.filters.type) {
+                return false;
+            }
+
+            // Country filter
+            if (this.filters.country !== 'all' && vehicle.country !== this.filters.country) {
+                return false;
+            }
+
+            // Era filter
+            if (this.filters.era !== 'all' && vehicle.era !== this.filters.era) {
+                return false;
+            }
+
+            // Year range filter
+            if (this.filters.yearFrom && vehicle.year < parseInt(this.filters.yearFrom)) {
+                return false;
+            }
+            if (this.filters.yearTo && vehicle.year > parseInt(this.filters.yearTo)) {
+                return false;
+            }
+
+            // Displacement filter
+            if (this.filters.displacement !== 'all') {
+                const displacement = vehicle.specs.displacement;
+                switch (this.filters.displacement) {
+                    case 'small': if (displacement > 5000) return false; break;
+                    case 'medium': if (displacement <= 5000 || displacement > 15000) return false; break;
+                    case 'large': if (displacement <= 15000 || displacement > 50000) return false; break;
+                    case 'super-large': if (displacement <= 50000) return false; break;
+                }
+            }
+
+            // Crew filter
+            if (this.filters.crew !== 'all') {
+                const crew = vehicle.specs.crew;
+                switch (this.filters.crew) {
+                    case 'small': if (crew > 100) return false; break;
+                    case 'medium': if (crew <= 100 || crew > 500) return false; break;
+                    case 'large': if (crew <= 500) return false; break;
+                }
+            }
+
+            // Speed filter
+            if (this.filters.speed !== 'all') {
+                const speed = vehicle.specs.speed;
+                switch (this.filters.speed) {
+                    case 'slow': if (speed > 25) return false; break;
+                    case 'medium': if (speed <= 25 || speed > 35) return false; break;
+                    case 'fast': if (speed <= 35) return false; break;
+                }
+            }
+
+            return true;
+        }
+
+        updateViewMode() {
+            const grid = document.getElementById('vehiclesGrid');
+            if (grid) {
+                grid.className = `vehicles-grid ${this.viewMode}-view`;
+            }
+        }
+
+        createVehicleCard(vehicle) {
+            const typeLabel = this.getTypeLabel(vehicle.category);
+            const countryLabel = this.getCountryLabel(vehicle.country);
+            const vId = encodeURIComponent(vehicle.id);
+            const name = escapeHtml(vehicle.name);
+            const desc = escapeHtml(vehicle.description);
+            const displacement = escapeHtml(vehicle.specs.displacement);
+            const length = escapeHtml(vehicle.specs.length);
+            const speed = escapeHtml(vehicle.specs.speed);
+            const crew = escapeHtml(vehicle.specs.crew);
+
+            return `
+                <div class="vehicle-card" data-vehicle-id="${vId}">
+                    <div class="vehicle-badge">${escapeHtml(countryLabel)}</div>
+                    <div class="vehicle-image">
+                        <div class="vehicle-image-placeholder">
+                            ${name}
+                        </div>
+                    </div>
+                    <div class="vehicle-content">
+                        <div class="vehicle-header">
+                            <h3 class="vehicle-title">${name}</h3>
+                        </div>
+                        <div class="vehicle-country">${escapeHtml(countryLabel)} • ${escapeHtml(vehicle.year)}г</div>
+                        <div class="vehicle-type">${escapeHtml(typeLabel)}</div>
+                        
+                        <div class="vehicle-specs">
+                            <div class="vehicle-spec">
+                                <span class="spec-label">Водоизм.</span>
+                                <span class="spec-value">${displacement}т</span>
+                            </div>
+                            <div class="vehicle-spec">
+                                <span class="spec-label">Длина</span>
+                                <span class="spec-value">${length}м</span>
+                            </div>
+                            <div class="vehicle-spec">
+                                <span class="spec-label">Скорость</span>
+                                <span class="spec-value">${speed} узлов</span>
+                            </div>
+                            <div class="vehicle-spec">
+                                <span class="spec-label">Экипаж</span>
+                                <span class="spec-value">${crew}</span>
+                            </div>
+                        </div>
+                        
+                        <p class="vehicle-description">${desc}</p>
+                        
+                        <div class="vehicle-actions">
+                            <button type="button" class="vehicle-btn quick-view-btn" data-vehicle-id="${vId}">
+                                Быстрый просмотр
+                            </button>
+                            <a href="naval-details.html?id=${vId}" class="vehicle-btn secondary">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        displayVehicles() {
+            const grid = document.getElementById('vehiclesGrid');
+            const resultsCount = document.getElementById('resultsCount');
+            const noResults = document.getElementById('noResults');
+            const loadingState = document.getElementById('loadingState');
+
+            if (loadingState) loadingState.style.display = 'none';
+
+            if (this.filteredVehicles.length === 0) {
+                grid.style.display = 'none';
+                if (noResults) noResults.style.display = 'block';
+                if (resultsCount) resultsCount.textContent = '0';
+                return;
+            }
+
+            if (noResults) noResults.style.display = 'none';
+            grid.style.display = 'grid';
+            if (resultsCount) resultsCount.textContent = this.filteredVehicles.length;
+
+            grid.innerHTML = this.filteredVehicles.map(vehicle => this.createVehicleCard(vehicle)).join('');
+            
+            // Привязываем события к новым карточкам
+            this.bindVehicleCardEvents();
+        }
+
+        // Helper methods
+        getTypeLabel(type) {
+            const types = {
+                'aircraft-carrier': 'Авианосец',
+                'battleship': 'Линкор',
+                'cruiser': 'Крейсер',
+                'destroyer': 'Эсминец',
+                'frigate': 'Фрегат',
+                'corvette': 'Корвет',
+                'submarine': 'Подлодка',
+                'landing-ship': 'Десантный корабль',
+                'patrol-ship': 'Сторожевой корабль'
+            };
+            return types[type] || type;
+        }
+
+        getCountryLabel(country) {
+            const countries = {
+                'russia': 'Россия/СССР',
+                'usa': 'США',
+                'china': 'Китай',
+                'japan': 'Япония',
+                'uk': 'Великобритания',
+                'france': 'Франция'
+            };
+            return countries[country] || country;
+        }
+    }
+
+    // Инициализация каталога
+    document.addEventListener('DOMContentLoaded', () => {
+        window.catalog = new NavalCatalog();
+    });
+    </script>
+</body>
+</html>

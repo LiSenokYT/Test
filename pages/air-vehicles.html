@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Воздушная техника | Архив Брони</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/catalog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">АРХИВ БРОНИ</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="../index.html" class="nav-link">Главная</a></li>
+                    <li><a href="ground-vehicles.html" class="nav-link">Наземная</a></li>
+                    <li><a href="air-vehicles.html" class="nav-link active">Воздушная</a></li>
+                    <li><a href="naval-vehicles.html" class="nav-link">Морская</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск техники..." class="search-input">
+                        <button type="button" class="search-btn">🔍</button>
+                    </div>
+                    <button type="button" class="mobile-menu-btn">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="../index.html">Главная</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="current">Воздушная техника</span>
+            </div>
+            
+            <div class="page-header-content">
+                <h1 class="page-title">Воздушная техника</h1>
+                <p class="page-subtitle">Истребители, бомбардировщики, штурмовики, транспортные и специальные самолёты</p>
+                
+                <div class="quick-stats">
+                    <div class="quick-stat">
+                        <span class="stat-number">26</span>
+                        <span class="stat-label">единиц техники</span>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="stat-number">11</span>
+                        <span class="stat-label">стран</span>
+                    </div>
+                    <div class="quick-stat">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">категорий</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-header">
+                <h2>
+                    <span>✈️</span>
+                    Фильтры воздушной техники
+                </h2>
+                <div class="filters-actions">
+                    <button type="button" class="filters-toggle" id="filtersToggle">
+                        <span>Показать фильтры</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+                    <button type="button" class="clear-filters" id="clearFilters">Сбросить все</button>
+                </div>
+            </div>
+            
+            <div class="filters-container" id="filtersContainer">
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label class="filter-label">Поиск по названию</label>
+                        <div class="search-filter">
+                            <input type="text" id="searchFilter" placeholder="Например: Су-57, F-22...">
+                            <button type="button" class="search-filter-btn">🔍</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Тип самолёта</label>
+                        <div class="filter-chips" id="typeFilter">
+                            <button type="button" class="filter-chip active" data-type="all">Все</button>
+                            <button type="button" class="filter-chip" data-type="fighter">Истребитель</button>
+                            <button type="button" class="filter-chip" data-type="interceptor">Истребитель-перехватчик</button>
+                            <button type="button" class="filter-chip" data-type="multirole">Многоцелевой истребитель</button>
+                            <button type="button" class="filter-chip" data-type="bomber">Бомбардировщик</button>
+                            <button type="button" class="filter-chip" data-type="strategic-bomber">Стратегический бомбардировщик</button>
+                            <button type="button" class="filter-chip" data-type="attack">Штурмовик</button>
+                            <button type="button" class="filter-chip" data-type="cas">Самолёт поддержки</button>
+                            <button type="button" class="filter-chip" data-type="recon">Самолёт-разведчик</button>
+                            <button type="button" class="filter-chip" data-type="awacs">Самолёт ДРЛО</button>
+                            <button type="button" class="filter-chip" data-type="tanker">Топливозаправщик</button>
+                            <button type="button" class="filter-chip" data-type="transport">Транспортный</button>
+                            <button type="button" class="filter-chip" data-type="trainer">Учебный</button>
+                            <button type="button" class="filter-chip" data-type="attack-helicopter">Ударный вертолёт</button>
+                            <button type="button" class="filter-chip" data-type="transport-helicopter">Транспортный вертолёт</button>
+                            <button type="button" class="filter-chip" data-type="special">Специальный</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Поколение</label>
+                        <select class="filter-select" id="generationFilter">
+                            <option value="all">Все поколения</option>
+                            <option value="2">2-е поколение</option>
+                            <option value="3">3-е поколение</option>
+                            <option value="4">4-е поколение</option>
+                            <option value="4+">4+ поколение</option>
+                            <option value="5">5-е поколение</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Страна</label>
+                        <select class="filter-select" id="countryFilter">
+                            <option value="all">Все страны</option>
+                            <option value="russia">Россия/СССР</option>
+                            <option value="usa">США</option>
+                            <option value="china">Китай</option>
+                            <option value="germany">Германия</option>
+                            <option value="uk">Великобритания</option>
+                            <option value="france">Франция</option>
+                            <option value="japan">Япония</option>
+                            <option value="israel">Израиль</option>
+                            <option value="sweden">Швеция</option>
+                            <option value="europe">Европа (совместные)</option>
+                            <option value="other">Другие</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Период</label>
+                        <select class="filter-select" id="eraFilter">
+                            <option value="all">Все периоды</option>
+                            <option value="cold-war">Холодная война</option>
+                            <option value="modern">Современность</option>
+                            <option value="future">Перспективные</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Годы службы</label>
+                        <div class="range-filter">
+                            <div class="range-inputs">
+                                <input type="number" id="yearFrom" placeholder="1950" min="1950" max="2030">
+                                <span class="range-separator">—</span>
+                                <input type="number" id="yearTo" placeholder="2024" min="1950" max="2030">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <button type="button" class="advanced-filters-toggle" id="advancedToggle">
+                            <span>Расширенные фильтры</span>
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                    </div>
+
+                    <div class="advanced-filters" id="advancedFilters">
+                        <div class="filter-group">
+                            <label class="filter-label">Дальность полёта</label>
+                            <select class="filter-select" id="rangeFilter">
+                                <option value="all">Любая</option>
+                                <option value="short">Короткая (до 1000 км)</option>
+                                <option value="medium">Средняя (1000-3000 км)</option>
+                                <option value="long">Дальняя (3000+ км)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-label">Практический потолок</label>
+                            <select class="filter-select" id="ceilingFilter">
+                                <option value="all">Любой</option>
+                                <option value="low">Низкий (до 10 км)</option>
+                                <option value="medium">Средний (10-15 км)</option>
+                                <option value="high">Высокий (15+ км)</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-label">Макс. скорость</label>
+                            <select class="filter-select" id="speedFilter">
+                                <option value="all">Любая</option>
+                                <option value="subsonic">Дозвуковая</option>
+                                <option value="supersonic">Сверхзвуковая</option>
+                                <option value="hypersonic">Гиперзвуковая</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label class="filter-label">Количество двигателей</label>
+                            <select class="filter-select" id="enginesFilter">
+                                <option value="all">Любое</option>
+                                <option value="1">1 двигатель</option>
+                                <option value="2">2 двигателя</option>
+                                <option value="3+">3+ двигателя</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="active-filters" id="activeFilters">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="container">
+            <div class="results-header">
+                <div class="results-info">
+                    <h3>Найдено единиц: <span id="resultsCount">26</span></h3>
+                    <div class="sort-controls">
+                        <label>Сортировка:</label>
+                        <select id="sortSelect">
+                            <option value="name">По названию (А-Я)</option>
+                            <option value="name-desc">По названию (Я-А)</option>
+                            <option value="year">По году (старые)</option>
+                            <option value="year-desc">По году (новые)</option>
+                            <option value="speed">По скорости (низкая)</option>
+                            <option value="speed-desc">По скорости (высокая)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="view-controls">
+                    <button type="button" class="view-btn active" data-view="grid" title="Сетка">
+                        ▦
+                    </button>
+                    <button type="button" class="view-btn" data-view="list" title="Список">
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <div class="vehicles-grid" id="vehiclesGrid">
+            </div>
+
+            <div class="loading-state" id="loadingState">
+                <div class="loading-spinner"></div>
+                <p>Загрузка авиатехники...</p>
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-icon">✈️</div>
+                <h3>Самолёты не найдены</h3>
+                <p>Попробуйте изменить параметры фильтрации</p>
+                <button type="button" class="cta-button primary" id="resetSearch">Сбросить фильтры</button>
+            </div>
+
+            <div class="load-more-container">
+                <button type="button" class="load-more-btn" id="loadMore">Загрузить ещё</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="modalClose">✕</button>
+            <div class="modal-body" id="modalBody">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">АРХИВ БРОНИ</span>
+                    </div>
+                    <p class="footer-description">
+                        Энциклопедия военной техники от древности до наших дней. 
+                        История, характеристики и технические details.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="ground-vehicles.html">Наземная</a></li>
+                        <li><a href="air-vehicles.html">Воздушная</a></li>
+                        <li><a href="naval-vehicles.html">Морская</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Категории</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Истребители</a></li>
+                        <li><a href="#">Бомбардировщики</a></li>
+                        <li><a href="#">Штурмовики</a></li>
+                        <li><a href="#">Вертолёты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Архив Брони. Фанатский проект. Не преследует политических целей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключаем наш загрузчик данных -->
+    <script src="../src/data/data-loader.js"></script>
+    <!-- Общие утилиты -->
+    <script src="../src/js/utils.js"></script>
+
+    <script>
+
+class AircraftCatalog {
+    constructor() {
+        this.aircraft = [];
+        this.filteredAircraft = [];
+        this.currentPage = 1;
+        this.itemsPerPage = 12;
+        this.filters = {
+            search: '',
+            type: 'all',
+            generation: 'all',
+            country: 'all',
+            era: 'all',
+            yearFrom: '',
+            yearTo: '',
+            range: 'all',
+            ceiling: 'all',
+            speed: 'all',
+            engines: 'all'
+        };
+        this.sortBy = 'name';
+        this.viewMode = 'grid';
+        this.filtersVisible = false;
+        
+        this.init();
+    }
+
+    async init() {
+        await this.loadAircraft(); // Делаем асинхронным
+        this.bindEvents();
+        this.applyFilters();
+        this.toggleFilters(false);
+    }
+
+    async loadAircraft() {
+        try {
+            const loader = window.dataLoader;
+            this.aircraft = await loader.loadVehicles('air');
+            console.log('📦 Загружено воздушной техники:', this.aircraft.length, 'единиц');
+            this.displayAircraft();
+        } catch (error) {
+            console.error('Ошибка загрузки воздушной техники:', error);
+            this.loadAircraftFallback();
+        }
+    }
+
+    loadAircraftFallback() {
+        console.log('Используем fallback данные для воздушной техники...');
+        this.aircraft = [
+            {
+                id: "su-57",
+                name: "Су-57",
+                country: "russia",
+                category: "fighter",
+                generation: "5",
+                era: "modern",
+                year: 2020,
+                description: "Российский многофункциональный истребитель пятого поколения с технологией стелс.",
+                specs: {
+                    range: 5500,
+                    ceiling: 20,
+                    speed: 2600,
+                    engines: 2,
+                    crew: 1,
+                    length: "19.8 м",
+                    wingspan: "14 м",
+                    weight: "18500 кг",
+                    armament: "Р-77, Р-73, 30-мм пушка"
+                }
+            },
+            {
+                id: "f-22-raptor",
+                name: "F-22 Raptor",
+                country: "usa",
+                category: "fighter",
+                generation: "5",
+                era: "modern",
+                year: 2005,
+                description: "Американский истребитель пятого поколения с технологией стелс.",
+                specs: {
+                    range: 3200,
+                    ceiling: 19.8,
+                    speed: 2410,
+                    engines: 2,
+                    crew: 1,
+                    length: "18.9 м",
+                    wingspan: "13.6 м",
+                    weight: "19700 кг",
+                    armament: "AIM-120, AIM-9, 20-мм пушка"
+                }
+            },
+            {
+                id: "mig-31",
+                name: "МиГ-31",
+                country: "russia",
+                category: "interceptor",
+                generation: "4",
+                era: "cold-war",
+                year: 1981,
+                description: "Сверхзвуковой истребитель-перехватчик дальнего радиуса действия.",
+                specs: {
+                    range: 3300,
+                    ceiling: 20.6,
+                    speed: 3000,
+                    engines: 2,
+                    crew: 2,
+                    length: "22.7 м",
+                    wingspan: "13.5 м",
+                    weight: "21820 кг",
+                    armament: "Р-33, Р-37, Р-77, 23-мм пушка"
+                }
+            }
+        ];
+        this.displayAircraft();
+    }
+
+    bindEvents() {
+        document.getElementById('filtersToggle').addEventListener('click', () => {
+            this.toggleFilters();
+        });
+
+        document.getElementById('searchFilter').addEventListener('input', (e) => {
+            this.filters.search = e.target.value;
+            this.applyFilters();
+        });
+
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                e.target.classList.add('active');
+                this.filters.type = e.target.dataset.type;
+                this.applyFilters();
+            });
+        });
+
+        ['country', 'era', 'generation', 'range', 'ceiling', 'speed', 'engines'].forEach(filter => {
+            const element = document.getElementById(filter + 'Filter');
+            if (element) {
+                element.addEventListener('change', (e) => {
+                    this.filters[filter] = e.target.value;
+                    this.applyFilters();
+                });
+            }
+        });
+
+        ['yearFrom', 'yearTo'].forEach(filter => {
+            const element = document.getElementById(filter);
+            if (element) {
+                element.addEventListener('input', (e) => {
+                    this.filters[filter] = e.target.value;
+                    this.applyFilters();
+                });
+            }
+        });
+
+        const sortSelect = document.getElementById('sortSelect');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', (e) => {
+                this.sortBy = e.target.value;
+                this.applyFilters();
+            });
+        }
+
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                this.viewMode = e.target.dataset.view;
+                this.updateViewMode();
+            });
+        });
+
+        const advancedToggle = document.getElementById('advancedToggle');
+        if (advancedToggle) {
+            advancedToggle.addEventListener('click', (e) => {
+                e.target.classList.toggle('active');
+                document.getElementById('advancedFilters').classList.toggle('active');
+            });
+        }
+
+        const clearFilters = document.getElementById('clearFilters');
+        if (clearFilters) {
+            clearFilters.addEventListener('click', () => {
+                this.clearFilters();
+            });
+        }
+
+        const resetSearch = document.getElementById('resetSearch');
+        if (resetSearch) {
+            resetSearch.addEventListener('click', () => {
+                this.clearFilters();
+            });
+        }
+
+        const loadMore = document.getElementById('loadMore');
+        if (loadMore) {
+            loadMore.addEventListener('click', () => {
+                this.loadMore();
+            });
+        }
+
+        const modalClose = document.getElementById('modalClose');
+        if (modalClose) {
+            modalClose.addEventListener('click', () => {
+                this.closeModal();
+            });
+        }
+
+        const modal = document.getElementById('quickViewModal');
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target.id === 'quickViewModal') {
+                    this.closeModal();
+                }
+            });
+        }
+    }
+
+    toggleFilters(show) {
+        this.filtersVisible = show !== undefined ? show : !this.filtersVisible;
+        const container = document.querySelector('.filters-container');
+        const toggle = document.getElementById('filtersToggle');
+        
+        if (this.filtersVisible) {
+            container.classList.add('active');
+            toggle.classList.add('active');
+            toggle.innerHTML = '<span>Скрыть фильтры</span><span class="toggle-icon">▼</span>';
+        } else {
+            container.classList.remove('active');
+            toggle.classList.remove('active');
+            toggle.innerHTML = '<span>Показать фильтры</span><span class="toggle-icon">▼</span>';
+        }
+    }
+
+    applyFilters() {
+        this.currentPage = 1;
+        this.filteredAircraft = this.aircraft.filter(aircraft => {
+            return this.matchesFilters(aircraft);
+        });
+
+        this.sortAircraft();
+        this.updateActiveFilters();
+        this.displayAircraft();
+    }
+
+    matchesFilters(aircraft) {
+        if (this.filters.search && !aircraft.name.toLowerCase().includes(this.filters.search.toLowerCase())) {
+            return false;
+        }
+
+        // ОБНОВЛЯЕМ: aircraft.type → aircraft.category
+        if (this.filters.type !== 'all' && aircraft.category !== this.filters.type) {
+            return false;
+        }
+
+        if (this.filters.generation !== 'all' && aircraft.generation !== this.filters.generation) {
+            return false;
+        }
+
+        if (this.filters.country !== 'all' && aircraft.country !== this.filters.country) {
+            return false;
+        }
+
+        if (this.filters.era !== 'all' && aircraft.era !== this.filters.era) {
+            return false;
+        }
+
+        if (this.filters.yearFrom && aircraft.year < parseInt(this.filters.yearFrom)) {
+            return false;
+        }
+        if (this.filters.yearTo && aircraft.year > parseInt(this.filters.yearTo)) {
+            return false;
+        }
+
+        // ОБНОВЛЯЕМ: aircraft.range → aircraft.specs.range
+        if (this.filters.range !== 'all') {
+            const range = aircraft.specs.range;
+            switch (this.filters.range) {
+                case 'short': { if (range > 1000) { return false; } break; }
+                case 'medium': { if (range <= 1000 || range > 3000) { return false; } break; }
+                case 'long': { if (range <= 3000) { return false; } break; }
+            }
+        }
+
+        // ОБНОВЛЯЕМ: aircraft.ceiling → aircraft.specs.ceiling
+        if (this.filters.ceiling !== 'all') {
+            const ceiling = aircraft.specs.ceiling;
+            switch (this.filters.ceiling) {
+                case 'low': { if (ceiling > 10) { return false; } break; }
+                case 'medium': { if (ceiling <= 10 || ceiling > 15) { return false; } break; }
+                case 'high': { if (ceiling <= 15) { return false; } break; }
+            }
+        }
+
+        // ОБНОВЛЯЕМ: aircraft.speed → aircraft.specs.speed
+        if (this.filters.speed !== 'all') {
+            const speed = aircraft.specs.speed;
+            switch (this.filters.speed) {
+                case 'subsonic': { if (speed > 1235) { return false; } break; }
+                case 'supersonic': { if (speed <= 1235) { return false; } break; }
+                case 'hypersonic': { if (speed <= 5000) { return false; } break; }
+            }
+        }
+
+        // ОБНОВЛЯЕМ: aircraft.engines → aircraft.specs.engines
+        if (this.filters.engines !== 'all') {
+            const engines = aircraft.specs.engines;
+            switch (this.filters.engines) {
+                case '1': { if (engines !== 1) { return false; } break; }
+                case '2': { if (engines !== 2) { return false; } break; }
+                case '3+': { if (engines < 3) { return false; } break; }
+            }
+        }
+
+        return true;
+    }
+
+    sortAircraft() {
+        this.filteredAircraft.sort((a, b) => {
+            switch (this.sortBy) {
+                case 'name':
+                    return a.name.localeCompare(b.name);
+                case 'name-desc':
+                    return b.name.localeCompare(a.name);
+                case 'year':
+                    return a.year - b.year;
+                case 'year-desc':
+                    return b.year - a.year;
+                // ОБНОВЛЯЕМ: aircraft.speed → aircraft.specs.speed
+                case 'speed':
+                    return a.specs.speed - b.specs.speed;
+                case 'speed-desc':
+                    return b.specs.speed - a.specs.speed;
+                default:
+                    return 0;
+            }
+        });
+    }
+
+    updateActiveFilters() {
+        const activeFiltersContainer = document.getElementById('activeFilters');
+        if (!activeFiltersContainer) return;
+
+        activeFiltersContainer.innerHTML = '';
+
+        Object.entries(this.filters).forEach(([key, value]) => {
+            if (value && value !== 'all') {
+                const filterElement = document.createElement('div');
+                filterElement.className = 'active-filter';
+                
+                let label = '';
+                switch (key) {
+                    case 'search':
+                        if (!value) { return; }
+                        label = `Поиск: "${value}"`;
+                        break;
+                    case 'type':
+                        label = `Тип: ${this.getTypeLabel(value)}`;
+                        break;
+                    case 'generation':
+                        label = `Поколение: ${this.getGenerationLabel(value)}`;
+                        break;
+                    case 'country':
+                        label = `Страна: ${this.getCountryLabel(value)}`;
+                        break;
+                    case 'era':
+                        label = `Период: ${this.getEraLabel(value)}`;
+                        break;
+                    case 'yearFrom':
+                        label = `Год от: ${value}`;
+                        break;
+                    case 'yearTo':
+                        label = `Год до: ${value}`;
+                        break;
+                    case 'range':
+                        label = `Дальность: ${this.getRangeLabel(value)}`;
+                        break;
+                    case 'ceiling':
+                        label = `Потолок: ${this.getCeilingLabel(value)}`;
+                        break;
+                    case 'speed':
+                        label = `Скорость: ${this.getSpeedLabel(value)}`;
+                        break;
+                    case 'engines':
+                        label = `Двигатели: ${this.getEnginesLabel(value)}`;
+                        break;
+                }
+
+                if (label) {
+                    filterElement.innerHTML = `
+                        ${label}
+                        <button type="button" class="active-filter-remove" data-filter="${key}">×</button>
+                    `;
+                    activeFiltersContainer.appendChild(filterElement);
+                }
+            }
+        });
+
+        document.querySelectorAll('.active-filter-remove').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const filter = e.target.dataset.filter;
+                this.removeFilter(filter);
+            });
+        });
+    }
+
+    removeFilter(filter) {
+        switch (filter) {
+            case 'search':
+                this.filters.search = '';
+                document.getElementById('searchFilter').value = '';
+                break;
+            case 'type':
+                this.filters.type = 'all';
+                document.querySelectorAll('.filter-chip').forEach(chip => {
+                    chip.classList.remove('active');
+                    if (chip.dataset.type === 'all') chip.classList.add('active');
+                });
+                break;
+            case 'generation':
+            case 'country':
+            case 'era':
+            case 'range':
+            case 'ceiling':
+            case 'speed':
+            case 'engines':
+                {
+                    this.filters[filter] = 'all';
+                    const filterElement = document.getElementById(filter + 'Filter');
+                    if (filterElement) { filterElement.value = 'all'; }
+                }
+                break;
+            case 'yearFrom':
+                this.filters.yearFrom = '';
+                document.getElementById('yearFrom').value = '';
+                break;
+            case 'yearTo':
+                this.filters.yearTo = '';
+                document.getElementById('yearTo').value = '';
+                break;
+        }
+        this.applyFilters();
+    }
+
+    clearFilters() {
+        this.filters = {
+            search: '',
+            type: 'all',
+            generation: 'all',
+            country: 'all',
+            era: 'all',
+            yearFrom: '',
+            yearTo: '',
+            range: 'all',
+            ceiling: 'all',
+            speed: 'all',
+            engines: 'all'
+        };
+
+        document.getElementById('searchFilter').value = '';
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.classList.remove('active');
+            if (chip.dataset.type === 'all') chip.classList.add('active');
+        });
+        
+        const filtersToReset = ['country', 'era', 'generation', 'range', 'ceiling', 'speed', 'engines'];
+        filtersToReset.forEach(filter => {
+            const element = document.getElementById(filter + 'Filter');
+            if (element) element.value = 'all';
+        });
+        
+        document.getElementById('yearFrom').value = '';
+        document.getElementById('yearTo').value = '';
+
+        this.applyFilters();
+    }
+
+    displayAircraft() {
+        const grid = document.getElementById('vehiclesGrid');
+        const resultsCount = document.getElementById('resultsCount');
+        const noResults = document.getElementById('noResults');
+        const loadingState = document.getElementById('loadingState');
+
+        if (!grid) return;
+        if (loadingState) loadingState.style.display = 'none';
+
+        if (!this.filteredAircraft || this.filteredAircraft.length === 0) {
+            grid.style.display = 'none';
+            if (noResults) noResults.style.display = 'block';
+            if (resultsCount) resultsCount.textContent = '0';
+            return;
+        }
+
+        if (noResults) noResults.style.display = 'none';
+        grid.style.display = 'grid';
+        if (resultsCount) resultsCount.textContent = this.filteredAircraft.length;
+
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+        const current = this.filteredAircraft.slice(0, endIndex);
+
+        grid.innerHTML = current.map(a => this.createAircraftCard(a)).join('');
+
+        this.bindAircraftCardEvents();
+    }
+
+    createAircraftCard(aircraft) {
+        const vId = encodeURIComponent(aircraft.id);
+        const name = escapeHtml(aircraft.name);
+        const desc = escapeHtml(aircraft.description);
+        const speed = escapeHtml(aircraft.specs && aircraft.specs.speed);
+        const range = escapeHtml(aircraft.specs && aircraft.specs.range);
+        const ceiling = escapeHtml(aircraft.specs && aircraft.specs.ceiling);
+        const crew = escapeHtml(aircraft.specs && aircraft.specs.crew);
+        const typeLabel = this.getTypeLabel(aircraft.category);
+        const countryLabel = this.getCountryLabel(aircraft.country);
+        const generationLabel = this.getGenerationLabel(aircraft.generation);
+
+        return `
+            <div class="vehicle-card" data-aircraft-id="${vId}">
+                <div class="vehicle-badge">${escapeHtml(countryLabel)}</div>
+                <div class="vehicle-image">
+                    <div class="vehicle-image-placeholder">
+                        ${name}
+                    </div>
+                </div>
+                <div class="vehicle-content">
+                    <div class="vehicle-header">
+                        <h3 class="vehicle-title">${name}</h3>
+                        <div class="generation-badge">${escapeHtml(generationLabel)}</div>
+                    </div>
+                    <div class="vehicle-country">${escapeHtml(countryLabel)} • ${escapeHtml(aircraft.year)}</div>
+                    <div class="vehicle-type">${escapeHtml(typeLabel)}</div>
+                    <div class="vehicle-specs">
+                        <div class="vehicle-spec">
+                            <span class="spec-label">Скорость</span>
+                            <span class="spec-value">${speed} км/ч</span>
+                        </div>
+                        <div class="vehicle-spec">
+                            <span class="spec-label">Дальность</span>
+                            <span class="spec-value">${range} км</span>
+                        </div>
+                        <div class="vehicle-spec">
+                            <span class="spec-label">Потолок</span>
+                            <span class="spec-value">${ceiling} км</span>
+                        </div>
+                        <div class="vehicle-spec">
+                            <span class="spec-label">Экипаж</span>
+                            <span class="spec-value">${crew}</span>
+                        </div>
+                    </div>
+                    <p class="vehicle-description">${desc}</p>
+                    <div class="vehicle-actions">
+                        <button type="button" class="vehicle-btn quick-view-btn" data-aircraft-id="${vId}">Быстрый просмотр</button>
+                        <a href="aircraft-details.html?id=${vId}" class="vehicle-btn secondary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    bindAircraftCardEvents() {
+        document.querySelectorAll('.quick-view-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const aircraftId = e.target.dataset.aircraftId;
+                this.showQuickView(aircraftId);
+            });
+        });
+
+        document.querySelectorAll('.vehicle-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('vehicle-btn')) {
+                    const aircraftId = card.dataset.aircraftId;
+                    window.location.href = `aircraft-details.html?id=${aircraftId}`;
+                }
+            });
+        });
+    }
+
+    showQuickView(aircraftId) {
+        const aircraft = this.aircraft.find(a => a.id === aircraftId);
+        if (!aircraft) return;
+
+        const modalBody = document.getElementById('modalBody');
+        if (!modalBody) return;
+
+        modalBody.innerHTML = this.createQuickViewContent(aircraft);
+
+        // Навешиваем обработчик закрытия (без inline onclick)
+        const closeBtn = modalBody.querySelector('.close-modal-btn');
+        if (closeBtn) closeBtn.addEventListener('click', () => this.closeModal());
+
+        document.getElementById('quickViewModal').classList.add('active');
+    }
+
+    createQuickViewContent(aircraft) {
+        // ОБНОВЛЯЕМ: aircraft.type → aircraft.category
+        const typeLabel = this.getTypeLabel(aircraft.category);
+        const countryLabel = this.getCountryLabel(aircraft.country);
+        const generationLabel = this.getGenerationLabel(aircraft.generation);
+
+        return `
+            <div class="quick-view">
+                <div class="quick-view-image">
+                    <div class="vehicle-image-placeholder large">
+                            ${escapeHtml(aircraft.name)}
+                    </div>
+                </div>
+                <div class="quick-view-content">
+                        <h2>${escapeHtml(aircraft.name)}</h2>
+                    <div class="quick-view-meta">
+                        <span class="meta-item">${countryLabel}</span>
+                        <span class="meta-item">${aircraft.year} год</span>
+                        <span class="meta-item">${typeLabel}</span>
+                        <span class="meta-item">${generationLabel}</span>
+                    </div>
+                    
+                    <div class="quick-view-specs">
+                        <div class="spec-row">
+                            <span class="spec-name">Экипаж:</span>
+                            <span class="spec-value">${aircraft.specs.crew}</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Длина:</span>
+                            <span class="spec-value">${aircraft.specs.length}</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Размах крыла:</span>
+                            <span class="spec-value">${aircraft.specs.wingspan}</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Масса:</span>
+                            <span class="spec-value">${aircraft.specs.weight}</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Макс. скорость:</span>
+                            <!-- ОБНОВЛЯЕМ: aircraft.speed → aircraft.specs.speed -->
+                            <span class="spec-value">${aircraft.specs.speed} км/ч</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Дальность полёта:</span>
+                            <!-- ОБНОВЛЯЕМ: aircraft.range → aircraft.specs.range -->
+                            <span class="spec-value">${aircraft.specs.range} км</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Практический потолок:</span>
+                            <!-- ОБНОВЛЯЕМ: aircraft.ceiling → aircraft.specs.ceiling -->
+                            <span class="spec-value">${aircraft.specs.ceiling} км</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-name">Вооружение:</span>
+                            <span class="spec-value">${escapeHtml(aircraft.specs.armament)}</span>
+                        </div>
+                    </div>
+                    
+                    <p class="quick-view-description">${escapeHtml(aircraft.description)}</p>
+                    
+                    <div class="quick-view-actions">
+                        <a href="aircraft-details.html?id=${encodeURIComponent(aircraft.id)}" class="vehicle-btn">
+                            Полное описание
+                        </a>
+                        <button type="button" class="vehicle-btn secondary close-modal-btn">
+                            Закрыть
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    closeModal() {
+        document.getElementById('quickViewModal').classList.remove('active');
+    }
+
+    updateViewMode() {
+        const grid = document.getElementById('vehiclesGrid');
+        if (grid) {
+            grid.className = `vehicles-grid ${this.viewMode}-view`;
+        }
+    }
+
+    loadMore() {
+        this.currentPage++;
+        this.displayAircraft();
+    }
+
+    getTypeLabel(type) {
+        const types = {
+            'fighter': 'Истребитель',
+            'interceptor': 'Истребитель-перехватчик',
+            'multirole': 'Многоцелевой истребитель',
+            'bomber': 'Бомбардировщик',
+            'strategic-bomber': 'Стратегический бомбардировщик',
+            'attack': 'Штурмовик',
+            'cas': 'Самолёт поддержки',
+            'recon': 'Самолёт-разведчик',
+            'awacs': 'Самолёт ДРЛО',
+            'tanker': 'Топливозаправщик',
+            'transport': 'Транспортный',
+            'trainer': 'Учебный',
+            'attack-helicopter': 'Ударный вертолёт',
+            'transport-helicopter': 'Транспортный вертолёт',
+            'special': 'Специальный'
+        };
+        return types[type] || type;
+    }
+
+    getCountryLabel(country) {
+        const countries = {
+            'russia': 'Россия/СССР',
+            'usa': 'США',
+            'china': 'Китай',
+            'germany': 'Германия',
+            'uk': 'Великобритания',
+            'france': 'Франция',
+            'japan': 'Япония',
+            'israel': 'Израиль',
+            'sweden': 'Швеция',
+            'europe': 'Европа (совместные)',
+            'other': 'Другие'
+        };
+        return countries[country] || country;
+    }
+
+    getGenerationLabel(generation) {
+        const generations = {
+            '2': '2-е пок.',
+            '3': '3-е пок.',
+            '4': '4-е пок.',
+            '4+': '4+ пок.',
+            '5': '5-е пок.'
+        };
+        return generations[generation] || generation;
+    }
+
+    getEraLabel(era) {
+        const eras = {
+            'cold-war': 'Холодная война',
+            'modern': 'Современность',
+            'future': 'Перспективные'
+        };
+        return eras[era] || era;
+    }
+
+    getRangeLabel(range) {
+        const ranges = {
+            'short': 'Короткая',
+            'medium': 'Средняя',
+            'long': 'Дальняя'
+        };
+        return ranges[range] || range;
+    }
+
+    getCeilingLabel(ceiling) {
+        const ceilings = {
+            'low': 'Низкий',
+            'medium': 'Средний',
+            'high': 'Высокий'
+        };
+        return ceilings[ceiling] || ceiling;
+    }
+
+    getSpeedLabel(speed) {
+        const speeds = {
+            'subsonic': 'Дозвуковая',
+            'supersonic': 'Сверхзвуковая',
+            'hypersonic': 'Гиперзвуковая'
+        };
+        return speeds[speed] || speed;
+    }
+
+    getEnginesLabel(engines) {
+        const enginesMap = {
+            '1': '1 двигатель',
+            '2': '2 двигателя',
+            '3+': '3+ двигателя'
+        };
+        return enginesMap[engines] || engines;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.catalog = new AircraftCatalog();
+});
+</script>
+</body>
+</html>
