@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Архив Брони | Энциклопедия военной техники</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Supabase client (используется на страницах, где требуется подключение к БД) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/supabase.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">АРХИВ БРОНИ</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Главная</a></li>
+                    <li><a href="pages/ground-vehicles.html" class="nav-link">Наземная</a></li>
+                    <li><a href="pages/air-vehicles.html" class="nav-link">Воздушная</a></li>
+                    <li><a href="pages/naval-vehicles.html" class="nav-link">Морская</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск техники..." class="search-input">
+                        <button type="button" class="search-btn">🔍</button>
+                    </div>
+                    <button type="button" class="mobile-menu-btn">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <!-- Можно заменить на видео -->
+            <!-- <video autoplay muted loop class="hero-video">
+                <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+            </video> -->
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">ЭНЦИКЛОПЕДИЯ</div>
+            <h1 class="hero-title">
+                <span class="title-line">АРХИВ</span>
+                <span class="title-line accent">БРОНИ</span>
+            </h1>
+            <p class="hero-subtitle">Сталь. Технологии. История. Вся военная техника в одном месте</p>
+            <div class="hero-actions">
+                <button type="button" class="cta-button primary">Исследовать каталог</button>
+                <button type="button" class="cta-button secondary">Узнать больше</button>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Листайте вниз</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domains Section -->
+    <section class="domains" id="catalog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Исследуйте Стихии</h2>
+                <p class="section-subtitle">Выберите категорию для изучения военной техники</p>
+            </div>
+            
+            <div class="domains-grid">
+                <div class="domain-card" data-domain="ground">
+                    <div class="domain-background"></div>
+                    <div class="domain-content">
+                        <div class="domain-icon">🚜</div>
+                        <h3 class="domain-title">Наземная</h3>
+                        <p class="domain-description">Танки, БМП, САУ, бронетранспортеры</p>
+                        <div class="domain-stats">
+                            <span>250+ единиц</span>
+                            <span>15 стран</span>
+                        </div>
+                        <a href="pages/ground-vehicles.html" class="domain-btn">Исследовать →</a>
+                    </div>
+                    <div class="domain-overlay"></div>
+                </div>
+                
+                <div class="domain-card" data-domain="air">
+                    <div class="domain-background"></div>
+                    <div class="domain-content">
+                        <div class="domain-icon">✈️</div>
+                        <h3 class="domain-title">Воздушная</h3>
+                        <p class="domain-description">Истребители, бомбардировщики, вертолеты</p>
+                        <div class="domain-stats">
+                            <span>180+ единиц</span>
+                            <span>12 стран</span>
+                        </div>
+                        <a href="pages/air-vehicles.html" class="domain-btn">Исследовать →</a>
+                    </div>
+                    <div class="domain-overlay"></div>
+                </div>
+                
+                <div class="domain-card" data-domain="naval">
+                    <div class="domain-background"></div>
+                    <div class="domain-content">
+                        <div class="domain-icon">⛴️</div>
+                        <h3 class="domain-title">Морская</h3>
+                        <p class="domain-description">Линкоры, крейсеры, авианосцы, подлодки</p>
+                        <div class="domain-stats">
+                            <span>120+ единиц</span>
+                            <span>8 стран</span>
+                        </div>
+                        <a href="pages/naval-vehicles.html" class="domain-btn">Исследовать →</a>
+                    </div>
+                    <div class="domain-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured" id="eras">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Легенды истории</h2>
+                <p class="section-subtitle">Самые знаковые образцы военной техники</p>
+            </div>
+            
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="card-image">
+                        <div class="image-placeholder">Т-34</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-badge">СССР</div>
+                        <h3 class="card-title">Т-34</h3>
+                        <p class="card-subtitle">Средний танк</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-label">Год</span>
+                                <span class="stat-value">1940</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Калибр</span>
+                                <span class="stat-value">76.2mm</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Экипаж</span>
+                                <span class="stat-value">4</span>
+                            </div>
+                        </div>
+                        <p class="card-description">Легендарный советский средний танк, символ победы в Великой Отечественной войне.</p>
+                        <button type="button" class="card-btn">Подробнее</button>
+                    </div>
+                </div>
+                
+                <div class="featured-card">
+                    <div class="card-image">
+                        <div class="image-placeholder">F-15 Eagle</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-badge">США</div>
+                        <h3 class="card-title">F-15 Eagle</h3>
+                        <p class="card-subtitle">Истребитель-перехватчик</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-label">Год</span>
+                                <span class="stat-value">1976</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Скорость</span>
+                                <span class="stat-value">2.5М</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Дальность</span>
+                                <span class="stat-value">1,965km</span>
+                            </div>
+                        </div>
+                        <p class="card-description">Всепогодный тактический истребитель, один из самых успешных современных самолётов.</p>
+                        <button type="button" class="card-btn">Подробнее</button>
+                    </div>
+                </div>
+                
+                <div class="featured-card">
+                    <div class="card-image">
+                        <div class="image-placeholder">Ямато</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-badge">Япония</div>
+                        <h3 class="card-title">Ямато</h3>
+                        <p class="card-subtitle">Линейный корабль</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <span class="stat-label">Год</span>
+                                <span class="stat-value">1941</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Водоизм.</span>
+                                <span class="stat-value">72,800т</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Орудия</span>
+                                <span class="stat-value">460mm</span>
+                            </div>
+                        </div>
+                        <p class="card-description">Самый большой линейный корабль в истории, символ морской мощи Японии.</p>
+                        <button type="button" class="card-btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="587">0</div>
+                    <div class="stat-label">Единиц техники</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Страны производители</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="85">0</div>
+                    <div class="stat-label">Лет истории</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1247">0</div>
+                    <div class="stat-label">Технических параметров</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">АРХИВ БРОНИ</span>
+                    </div>
+                    <p class="footer-description">
+                        Энциклопедия военной техники от древности до наших дней. 
+                        История, характеристики и технические details.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="pages/ground-vehicles.html">Наземная</a></li>
+                        <li><a href="pages/air-vehicles.html">Воздушная</a></li>
+                        <li><a href="pages/naval-vehicles.html">Морская</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Категории</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Танки</a></li>
+                        <li><a href="#">Авиация</a></li>
+                        <li><a href="#">Флот</a></li>
+                        <li><a href="#">Артиллерия</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">Email</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Архив Брони. Фанатский проект. Не преследует политических целей.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
